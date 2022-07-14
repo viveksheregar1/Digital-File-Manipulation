@@ -25,6 +25,7 @@ file manipulation:
 
 spread sheet manipulation:
 #pip install pandas
+#pip install tabulate
 
 audio video manipulation:
 #pip install filetype
