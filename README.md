@@ -19,9 +19,9 @@ text manipulation:
 #pip install pytesseract
 
 file manipulation:
-pip install pdf2docx
-pip install PyMuPDF
-pip install docx
+#pip install pdf2docx
+#pip install PyMuPDF
+#pip install docx
 
 spread sheet manipulation:
 #pip install pandas
