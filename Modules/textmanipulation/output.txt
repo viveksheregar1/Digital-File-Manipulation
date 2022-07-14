@@ -1,0 +1,3 @@
+The text in the selected region is as follows:
+was
+

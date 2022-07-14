@@ -1,0 +1,19 @@
+•	Document preparation format
+1.	Size
+	The size of the paper shall be standard A4; height 297 mm, width 210mm.  
+	
+2.	Type-Setting, Text Processing and Printing 
+	The standard font shall be Times New Roman of 12 pts with 1.5line spacing. 
+
+3.	Page Format
+	The printed sheets shall have the following writing area and margins:
+        Top margin .5”
+        Bottom margin .5”
+        Left margin 1”
+        Right margin .75”
+
+4.	Pagination
+	Page numbering in the text of the dissertation shall be numerals starting from ‘1’ at the center of the footer Pagination for pages before the Introduction chapter shall be in lower case Roman numerals,e.g., ‘iv’.
+
+5.	Paragraph format
+Horizontal space between paragraphs shall be about 2.5 line spacing. 

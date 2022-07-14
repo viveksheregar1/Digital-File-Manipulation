@@ -1,0 +1,13 @@
+
+Sheet name is:Missing Checkin Checkout Record
+|    | Employee Name   | Date       | Reason                                 |
+|---:|:----------------|:-----------|:---------------------------------------|
+|  0 | Vivek Kotegar   | 25-04-2022 | Missing Check in and Missing Check out |
+|  1 | Vivek Kotegar   | 26-04-2022 | Missing Check in and Missing Check out |
+|  2 | Vivek Kotegar   | 27-04-2022 | Missing Check in and Missing Check out |
+|  3 | Vivek Kotegar   | 28-04-2022 | Missing Check in and Missing Check out |
+|  4 | Vivek Kotegar   | 29-04-2022 | Missing Check in and Missing Check out |
+|  5 | Vivek Kotegar   | 02-05-2022 | Missing Check in and Missing Check out |
+|  6 | Vivek Kotegar   | 04-05-2022 | Missing Check in and Missing Check out |
+|  7 | Vivek Kotegar   | 05-05-2022 | Missing Check in and Missing Check out |
+|  8 | Vivek Kotegar   | 06-05-2022 | Missing Check in and Missing Check out |

@@ -1,0 +1,157 @@
+2. SOFTWARE REQUIREMENT SPECFICAION
+2.1. Introduction 
+Software Requirement Specification is a description of a software to be developed. It layouts functional and non-functional requirements and may include the set of use cases that describes the user interaction that they must provide. It helps the client to understand their own needs. It provides justification of final product. It helps to bridge the communication gap between developer and user.
+The Purpose of Software Requirement Specification document is to provide a detailed overview of the software product and its parameter and goals. It specifies all the requirement of the application.
+The boundaries of software products are defined set of requirements. The software development team designing implements tests and delivers these requirements to you. A requirement is an atomic unit of software product from the view point of the user. As a rule, requirements are always correct, unambiguous, verifiable and traceable requirements are numbered and prioritized. 
+
+2.2. Overall Description 
+2.2.1. Product perspective
+2.2.1.1. System interfaces:
+This application runs in the latest version of python and pytesseract on windows, linux and mac OS.
+
+2.2.1.2 User interfaces 
+This applications GUI provides menus, toolbars, buttons, frames, containers, grids allowing for easy control by a keyboard and a mouse.
+
+2.2.1.3 Hardware interfaces 
+	Not Applicable.
+
+2.2.1.4 Software interfaces
+Not Applicable.
+
+
+2.2.1.5 Communications interfaces
+This application requires internet connectivity as communication 		interface.
+
+		2.2.1.6 Interfaces with Server
+Not Applicable.	
+
+2.2.2. Product Functions 
+The product function relates physical output of a production process to physical input as features of production.
+The general function of this application is to manipulate the digital files as per the user requirements. This application provides various functionalities like text manipulation on the image, manipulating the image, video-audio manipulations and file conversions like converting text, pdf and word document with each other.
+
+2.2.3. User characteristics 
+The End User must have basic knowledge about the usage of the system, which is how to operate the application and also little knowledge on the python software.
+
+2.2.4. General constraints
+The software works on any computer system. And it requires clear image for manipulation and audio quality must be good and video quality must be good.
+		The system must have more than 2GB of RAM, and the screen resolution 			must be more than 1600X900 pixels. The system must have an external 			software called pytesseract and requires internet connectivity for 				communication with an api.
+
+
+
+
+
+2.2.5. Assumptions and Dependencies
+These factors are not design constraints on the software but any changes to these factors can affect the requirement in the SRS.
+The image quality must be good for image and text manipulation. Video and Audio quality must be good. The audio format must be “.wav”.
+The system must have more than 2GB of RAM and must run on latest version of OS and the system must have pytesseract engine.
+
+2.3. Special Requirements (Software / Hardware - if any)
+	This application requires a software called pytesseract which is an external engine.
+
+2.4. Functional requirements
+	In the functional requirement section, the functional capabilities of the system are 	described. In this organization, the functional capabilities for all the modes of 	operation of the software are given. For each functional requirement, the required 	inputs, desired outputs and processing requirements will have to be specified.
+
+	2.4.1 Text Manipulation in an Image
+		2.4.1.1 Extracting Text from Images
+		a. Input: Input is a clear image.
+		b. Process: Process include extracting text from the given image.
+		c. Output:  Output is the text extracted from the image.
+
+		2.4.1.2 Extracting Text from Region of Interest
+		a. Input: Input is a clear image.
+		b. Process: Process include extracting text from the region of   					       interest from the given image.
+		c. Output: Output is the text extracted from the specified region in 				       the image.
+
+		2.4.1.3 Highlighting Text 
+		a. Input: Input is a clear image as input.
+		b. Process: Process include Highlighting text in the given image.
+		c. Output: Output is the text highlighted in the image or a message 				       saying that “the given text is not found”.
+
+	2.4.2 Image Manipulation
+		2.4.2.1 Comparing 2 Images
+		a. Input: Inputs are 2 clear images.
+		b. Process: Process include comparing the pixel values of the 					        given images.
+		c. Output: Output is the result of comparing the image. That is, if 				       	      the images are same or not.
+
+		2.4.2.2 Face Detection
+		a. Input: Input is a clear image.
+		b. Process: Process include applying some filters on the image to 					       find the total faces in the given image.
+		c. Output: Output is the total number of faces in the image (if 					       any).
+
+		2.4.2.3 Object Detection
+		a. Input: Input is a clear image.
+		b. Process: Process include applying some filters on the image to					       find the total objects in the given image.
+		c. Output: Output is the total number of objects in the image (if 					       any).
+
+	2.4.3 Video-Audio Manipulation
+		2.4.3.1 Extracting Text from Video
+		a. Input: Input is a video with clear audio.
+		b. Process: Process include extracting audio and then extracting 					       text from that audio.
+		c. Output: Output is text file extracted from the video.
+
+		2.4.3.2 Extracting Audio from Video
+		a. Input: Input is a video with clear audio.
+		b. Process: Process include extracting audio from the video.
+		c. Output: Output is the audio file extracted from the video.
+
+		2.4.3.3 Extracting Text from Audio
+		a. Input: Input is a clear audio file.
+		b. Process: Process include extracting text from the audio.
+		c. Output: Output is the text file extracted from the audio.
+
+
+	2.4.4 File Manipulation
+		2.4.4.1 Pdf to Text
+			a. Input: Input is a pdf file.
+			b. Process: Process include extracting text from the given pdf file 					        to save it as a text file.
+			c. Output: Output is a text file.
+		
+		2.4.4.2 Doc to Text
+			a. Input: Input is a Docx file.
+			b. Process: Process include extracting text from the given Docx 					        file to save it as a text file.
+			c. Output: Output is a text file.
+
+		2.4.4.3 Text to Pdf
+			a. Input: Input is a text file.
+			b. Process: Process include extracting text from the given text file 					        to save it as a pdf file.
+			c. Output: Output is a pdf file.
+
+		2.4.4.4 Text to Docx
+			a. Input: Input is a text file.
+			b. Process: Process include extracting text from the given text file 					        to save it as a Docx file.
+			c. Output: Output is a Docx file.
+
+
+
+2.5. Design Constraints 
+	The client environment may restrict the designer to include some design 		constraints that must be followed.
+	2.5.1. Hardware Constraint
+		The system must have more than 2GB of RAM, and the screen resolution 			must be more than 1600X900 pixels.
+	2.5.2. Software Constraint
+		The system must have Windows OS and pytesseract.
+	
+	2.5.3. Fault Tolerance
+Fault tolerance requirements can place a major constraint on how the system is to be designed. Fault tolerance requirements often make the system more complex and expensive, so they should be minimized.	
+If any fault occurs due to blur image or blur audio or video, then the application shows an error message stating the fault and asks the user to input clear image, audio or video.
+	2.5.4. Security
+		Currently security requirements have become essential and major for all 			types of systems. Security requirements place restrictions on the use of 			certain commands, control access to database, provide different kinds of 			access, requirements for different people, require the use of passwords and 		cryptography techniques, and maintain a log of activities in the system.
+	2.5.5. Standard Compliance
+		It specifies the requirements for the standard the system must follow. The 			standards may include the report format, Type of Navigations, Naming 			Conventions for Button, access keys, shortcut keys.
+
+2.6. System Attributes
+Availability
+Availability refers to the percentage of time that the infrastructure, system, or solution remains operational under normal circumstances in order to serve its intended purpose.
+
+
+Portability
+Portability, in relation to software, is a measure of how easily an application can be transferred from one computer environment to another. A computer software application is considered portable to a new environment if the effort required to adapt it to the new environment is within reasonable limits.
+Reliability
+Reliability refers to the probability that the system will meet certain performance standards in yielding correct output for a desired time duration.
+Maintainability
+Maintainability refers to the ease with which you can repair, improve and understand software code. Software maintenance is a phase in the software development cycle that starts after the customer has received the product.
+Scalability
+Software scalability is an attribute of a tool or a system to increase its capacity and functionalities based on its users’ demand. Scalable software can remain stable while adapting to changes, upgrades, overhauls, and resource reduction.
+
+2.7. Other Requirements (if any)
+	Not Applicable.
+
