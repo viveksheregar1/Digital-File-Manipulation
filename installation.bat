@@ -1,0 +1,12 @@
+pip install pytesseract
+pip install numpy
+pip install deskew
+pip install opencv-python
+pip install tabulate
+pip install pandas
+pip install pdf2docx
+pip install PyMuPDF
+pip install docx
+pip install moviepy
+pip install pydub
+pip install gtts
