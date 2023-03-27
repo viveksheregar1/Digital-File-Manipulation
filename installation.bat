@@ -10,3 +10,5 @@ pip install docx
 pip install moviepy
 pip install pydub
 pip install gtts
+pip install openpyxl
+pip install ffmpeg

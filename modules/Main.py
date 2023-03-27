@@ -1,4 +1,4 @@
-#last updates : 23/08/2022, 5pm
+ #last updates : 23/08/2022, 5pm
 from textwrap import indent
 from tkinter import Button,Frame,Label,StringVar,Toplevel
 from tkinter import Entry,Tk,filedialog,messagebox,ttk
@@ -286,7 +286,7 @@ class Window1:
         height=(self.window1_height/2)-150
         font=("Comic Sans MS",20,"bold")
         msg="upload the proper image and save the file in desired location then application pops up the image to select the region of interest" \
-            "On  selecting the region  pressing 'Enter' key two times will save the file as png and 'c' button to cancel the selection\n max file size is 5MB "\
+            "On  selecting the region  pressing 'Enter' key will save the file as png and 'c' button to cancel the selection\n max file size is 5MB "\
 
         msg_window=Toplevel(self.first_window)
         msg_window.geometry("%dx%d+%d+%d" %(500,400,width,height))
