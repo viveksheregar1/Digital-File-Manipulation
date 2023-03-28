@@ -40,8 +40,8 @@ def filesize(input_file:str):
     return (path.getsize(input_file)/1048576)
 
 #pytesseractpath
-pytesseract.tesseract_cmd =r"C:/Program Files/Tesseract-OCR/tesseract.exe"
-
+# pytesseract.tesseract_cmd =r"C:/Program Files/Tesseract-OCR/tesseract.exe"
+pytesseract.tesseract_cmd='/tesseract.exe'
 #-----------filters-----------------
 class Filters:
     """

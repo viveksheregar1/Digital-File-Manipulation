@@ -1,1 +1,1 @@
-from .audiovideomanipulation import trim_audio,video_to_audio,text_to_audio
+from .audiovideomanipulation import trim_audio,video_to_audio,text_to_audio,merge_audio
