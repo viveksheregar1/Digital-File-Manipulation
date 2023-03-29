@@ -1,4 +1,4 @@
-#last updates : 23/08/2022,3pm
+#last updates : 30/03/2023,1am
 from os import remove,path
 from re import findall,IGNORECASE
 from math import radians
@@ -10,7 +10,7 @@ import cv2 #pip install opencv-python
 from cv2 import WINDOW_NORMAL
 
 """ 
-    this module has 3 functions that can be used to convert
+    this module has 4 functions that can be used to convert
     
     image file to a text file
         image_to_text(input_file:str,output_file:str)
@@ -23,7 +23,10 @@ from cv2 import WINDOW_NORMAL
     extracting text from a selected region
         text_from_region_of_interest(input_file:str,output_file:str)
             returns a dictionary return_data{'output':"",'error':"","output_file":""}
-
+    
+    face detection(puts squares around faces, if found)
+        face_detection(input_file:str,output_file:str):
+            returns a dictionary return_data{'output':"",'error':"","output_file":""}
 """
 
 #custom exception
@@ -378,3 +381,72 @@ def text_from_region_of_interest(input_file:str,output_file:str):
         #writing error
         return_data['error']=e 
     return return_data   
+
+#------function 4----------
+def face_detection(input_file:str,output_file:str):
+    """
+        this functions will detect faces in a clean image and draws a square box around them
+    """
+    #dictionary to store output 
+    return_data={
+        "output":"",
+        "error":"",
+        "output_file":""
+    }
+    try:
+        #checking for file extension
+        input_file_types=[".jpeg",".jpg",".png",".webp",".svg",".raw",".xcf",".jpx",".tiff",".cr2",".bmp",".jxr",".psd",".ico",".heic",".dcm"]
+        output_file_types=[".jpeg",".jpg",".png",".webp",".svg",".raw",".xcf",".jpx",".tiff",".cr2",".bmp",".jxr",".psd",".ico",".heic",".dcm"]
+        input_file_type=file_type(input_file)
+        if input_file_type not in input_file_types:
+            CustomError.error_data="Given file format ("+input_file_type+") is not supported..!"
+            raise CustomError
+        output_file_type=file_type(output_file)
+        if output_file_type not in output_file_types:
+            CustomError.error_data="Given file format ("+output_file_type+" is not supported..!"
+            raise CustomError
+        
+        #cheking if the file is too big
+        max_size=5#confirm the max size
+        if(filesize(input_file)>max_size):
+            CustomError.error_data="Maximum file size is "+str(max_size)+"MB."
+            raise CustomError
+
+        # Create the haar cascade
+        faceCascade = cv2.CascadeClassifier("./res/haarcascade_frontalface_default.xml")
+
+        # Read the image
+        image = cv2.imread(input_file)
+        filters=Filters()
+        gray_image=filters.grayscale(image)
+        gray_image=filters.contrast(gray_image)
+        # Detect faces in the image
+        faces = faceCascade.detectMultiScale(
+            gray_image,
+            scaleFactor=1.2,
+            minNeighbors=5,
+            minSize=(30, 30),
+            flags = cv2.CASCADE_SCALE_IMAGE
+        )
+
+        # print("Found {0} faces!".format(len(faces)))
+        if len(faces)!=0:
+            # Draw a rectangle around the faces
+            for (x, y, w, h) in faces:
+                cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 8)
+            cv2.imwrite(output_file, image)
+            return_data['output']="done"
+            return_data['output_file']=output_file #path of saved file
+        else:
+            return_data['error']='no Faces found..!'
+    except CustomError:
+        #removing output file if an error occurs
+        remove(output_file)
+        #writing error
+        return_data['error']=CustomError.error_data
+    except Exception as e:
+        #removing output file if an error occurs
+        remove(output_file)
+        #writing error
+        return_data['error']=e  
+    return return_data
